@@ -553,11 +553,14 @@ a {
     display: flex;
     justify-content: space-between;
 }
-.footer .social-icon .icon {
-    width: 15px;
-    height: 15px;
+.footer .social-link {
+    width: 28px;
+    height: 28px;
     border-radius: 20%;
-    background: #ddd;
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer .row-footer {
     margin-top: 81px;
