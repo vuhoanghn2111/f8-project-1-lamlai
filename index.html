@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -16,6 +16,7 @@
         />
         <link rel="stylesheet" href="./assets/reset.css" />
         <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/responsive.css" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -87,26 +88,45 @@
         />
         <link rel="manifest" href="./assets/img/favicon/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+        <meta
+            name="msapplication-TileImage"
+            content="/assets/img/favicon/ms-icon-144x144.png"
+        />
         <meta name="theme-color" content="#ffffff" />
     </head>
     <body>
-        <!-- Fixed header -->
+        <!-- PC header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="nav-bar">
+                    <!-- Tablet/mobile menu -->
+                    <label class="toggle-menu" for="menu-checkbox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                fill="currentColor"
+                                ;
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
                     <!-- Logo -->
                     <a href="#">
-                        <img src="./assets/img/header/Logo.svg" alt="Besnik." />
+                        <img
+                            class="logo"
+                            src="./assets/img/header/Logo.svg"
+                            alt="Besnik."
+                        />
                     </a>
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pc-nav">
                         <li>
                             <a href="#">Home</a>
                         </li>
-                        <li>
-                            <a href="#company">Company</a>
-                        </li>
+
                         <li>
                             <a href="#services">Services</a>
                         </li>
@@ -116,11 +136,11 @@
                         <li>
                             <a href="#resources">Resources</a>
                         </li>
-                        <li>
-                            <a href="#contact">Contact</a>
+                        <li class="show-on-mobile separate">
+                            <a href="#!">Sign in</a>
                         </li>
-                        <li>
-                            <a href="#about">About</a>
+                        <li class="show-on-mobile">
+                            <a href="#!">Sign up</a>
                         </li>
                     </ul>
                     <!-- Action -->
@@ -130,6 +150,34 @@
                     </div>
                 </nav>
             </div>
+        </header>
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="./assets/img/header/Logo.svg" alt="Besnik." />
+                </a>
+                <!-- Navigation -->
+                <ul id="mobile-nav"></ul>
+            </div>
+            <script>
+                const pcNav = document.querySelector("#pc-nav");
+                const mobileNav = document.querySelector("#mobile-nav");
+                // Copy from PC nav to mobile nav
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
         </header>
         <!-- Header -->
         <div class="header">
@@ -159,7 +207,7 @@
         <!-- Main content -->
         <main>
             <!-- Clients -->
-            <div id="company" class="clients">
+            <div class="clients">
                 <div class="content">
                     <div class="row">
                         <!-- Logo -->
@@ -592,7 +640,7 @@
             </div>
         </main>
         <!-- Footer -->
-        <footer id="about" class="footer">
+        <footer class="footer">
             <div class="content">
                 <div class="row row-top">
                     <div class="column">
