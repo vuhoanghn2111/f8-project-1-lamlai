@@ -357,9 +357,10 @@ a {
     background: #fff;
     box-shadow: 90px 85px 100px 0 rgba(0, 0, 0, 0.06);
 }
-.featured2-trend .row {
+.featured2-trend .row-trend {
     margin-top: 45px;
     margin-left: 22px;
+    display: flex;
 }
 .featured2 .featured2-trend .value {
     width: 159px;
@@ -392,6 +393,7 @@ a {
 .featured2 .avatar-block {
     margin-top: 26px;
     margin-left: 22px;
+    display: flex;
     gap: 16px 14px;
     flex-wrap: wrap;
 }
@@ -452,6 +454,7 @@ a {
     width: 309px;
 }
 .featured2 .row-data {
+    display: flex;
     justify-content: space-between;
     margin-top: 110px;
 }
@@ -523,7 +526,7 @@ a {
     background: #f5fafe;
 }
 .footer .row-top {
-    gap: 185px;
+    column-gap: 185px;
 }
 .footer .column .heading {
     color: #1c1c1d;
