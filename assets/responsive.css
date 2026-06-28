@@ -71,6 +71,9 @@
         margin-right: auto;
         text-align: center;
     }
+    .hero .title {
+        width: 100%;
+    }
     .hero .desc {
         width: 80%;
         margin-left: auto;
@@ -79,13 +82,14 @@
     .clients .clients-logo {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 74px;
+        column-gap: 74px;
+        row-gap: 30px;
     }
     .guide .row {
         justify-content: center;
         gap: 40px;
     }
-    .featured1 .f1-content{
+    .featured1 .f1-content {
         grid-template-columns: 1fr 1fr;
     }
     .featured2 .row {
@@ -104,9 +108,9 @@
         width: 70%;
     }
     .featured2 .sub-title .desc {
-        width: 100%;    
+        width: 100%;
     }
-    .featured2 .row-data .detail  {
+    .featured2 .row-data .detail {
         font-size: 5rem;
     }
     .featured2 .row-data .desc {
@@ -129,11 +133,81 @@
 }
 /* Mobile */
 @media screen and (max-width: 767px) {
+    .header {
+        height: auto;
+    }
     .menu-drawer {
         inset: 0 25% 0 0;
         padding: 40px;
     }
     .nav-bar .action {
         display: none;
+    }
+    .hero .info {
+        margin-top: 60px;
+    }
+    .hero .title {
+        font-size: 5.2rem;
+    }
+    .hero .desc {
+        width: 100%;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .clients .row .desc {
+        font-size: 1.5rem;
+    }
+    .clients .clients-logo {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .clients .clients-logo a {
+        text-align: center;
+    }
+    .guide .row {
+        flex-direction: column;
+    }
+    .featured1 .link {
+        display: none;
+    }
+    .featured1 .f1-content {
+        grid-template-columns: 1fr;
+    }
+    .featured1 .view-all {
+        text-align: center;
+        margin-top: 60px;
+    }
+    .featured2 .sub-title .title {
+        width: 100%;
+    }
+    .featured2 .img-block {
+        width: 100%;
+    }
+    .featured2 .featured2-trend {
+        top: 15px;
+        left: 15px;
+        border-radius: 12px;
+    }
+    .featured2 .row-data {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+    .newletters .info {
+        padding: 32px;
+    }
+    .newletters .body {
+        height: auto;
+    }
+    .footer .row-top {
+        grid-template-columns: 1fr;
+    }
+    .footer .row-footer {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .footer .row-footer .desc {
+        margin-left: 0;
     }
 }
